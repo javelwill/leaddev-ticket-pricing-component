@@ -150,7 +150,7 @@ section {
   font-size: var(--fs-600);
   font-weight: bold;
   line-height: 1;
-  width: 75%;
+  width: 90%;
 }
 
 .container {
@@ -333,12 +333,17 @@ section {
   font-size: var(--fs-500);
 }
 
-.online hr {
-  color: var(--clr-french-gray);
+.online .ticket-price {
+  border-top: 1px solid var(--clr-french-gray);
+  ;
+  padding-top: 0.25em;
+  margin-top: 0.25em;
+
 }
 
-.online .ticket:hover hr {
-  color: var(--clr-federal-blue)
+.online .ticket:hover .ticket-price {
+  border-top: 1px solid var(--clr-federal-blue);
+  ;
 }
 
 
