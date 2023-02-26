@@ -290,7 +290,7 @@ section {
   grid-column: 2 / 3;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -334,7 +334,7 @@ section {
 
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .online {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
