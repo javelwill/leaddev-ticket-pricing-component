@@ -78,7 +78,7 @@ strong {
   color: var(--clr-federal-blue)
 }
 
-main {
+section {
   font-size: var(--fs-400);
   font-family: var(--ff-normal);
   text-align: center;
@@ -87,12 +87,51 @@ main {
   margin: 0 auto;
 }
 
-.left-col,
-.right-col {
+.col {
   background-color: var(--clr-white-smoke);
   margin-bottom: 2em;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
+}
+
+.recommended {
+  background-color: var(--clr-federal-blue);
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.right .recommended {
+  display: none;
+}
+
+.recommended p {
+  font-size: var(--fs-600);
+  font-weight: bold;
+  color: var(--clr-white);
+}
+
+.option {
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-bottom: 2em;
+}
+
+.option p {
+  font-size: var(--fs-600);
+  font-weight: bold;
+  line-height: 1;
+  width: 75%;
 }
 
 .container {
@@ -113,35 +152,9 @@ main {
   margin-left: -.0313rem;
 }
 
-.recommended {
-  background-color: var(--clr-federal-blue);
-  color: var(--clr-white);
-  font-size: var(--fs-600);
-  font-weight: bold;
-  padding-top: 1em;
-  padding-bottom: 0.5em;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-}
-
-.right-col .recommended {
-  background: white;
-}
-
-.option {
-  font-size: var(--fs-600);
-  font-weight: bold;
-  width: 75%;
-  margin: 0 auto;
-  padding-top: 2em;
-  line-height: 1.15;
-  height: 5em;
-}
-
 .tickets-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 2em;
   gap: 1em;
 }
 
@@ -190,8 +203,13 @@ main {
   border-radius: 0.8em;
   padding: 1em .6875em;
   display: grid;
-  gap: 0.5em;
+  gap: 0.1em;
   cursor: pointer;
+  height: 17rem;
+}
+
+.right .ticket-savings {
+  display: none;
 }
 
 .primary {
@@ -273,18 +291,22 @@ main {
 }
 
 @media screen and (min-width: 800px) {
-  main {
+  section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 36px;
   }
 
-  .option {
+  .ticket {
+    height: 16rem;
+  }
+
+  .option p {
     width: auto;
-    margin: unset;
-    padding-top: 2em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    line-height: 1.15;
+  }
+
+  .right .recommended {
+    display: block;
+    background-color: var(--clr-white);
   }
 }
