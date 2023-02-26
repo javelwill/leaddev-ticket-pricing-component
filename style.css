@@ -83,6 +83,8 @@ main {
   font-family: var(--ff-normal);
   text-align: center;
   color: var(--clr-federal-blue);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .left-col,
@@ -111,7 +113,7 @@ main {
   margin-left: -.0313rem;
 }
 
-.left-col .recommended {
+.recommended {
   background-color: var(--clr-federal-blue);
   color: var(--clr-white);
   font-size: var(--fs-600);
@@ -122,6 +124,10 @@ main {
   border-top-right-radius: 0.5em;
 }
 
+.right-col .recommended {
+  background: white;
+}
+
 .option {
   font-size: var(--fs-600);
   font-weight: bold;
@@ -129,6 +135,7 @@ main {
   margin: 0 auto;
   padding-top: 2em;
   line-height: 1.15;
+  height: 5em;
 }
 
 .tickets-container {
@@ -263,4 +270,21 @@ main {
 
 .staffplus {
   grid-column: 2 / 3;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .option {
+    width: auto;
+    margin: unset;
+    padding-top: 2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    line-height: 1.15;
+  }
 }
