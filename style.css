@@ -89,14 +89,27 @@ main {
 .right-col {
   background-color: var(--clr-white-smoke);
   margin-bottom: 2em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
 }
 
-.left-col .container,
-.right-col .container {
-  padding: .5em;
+.container {
+  position: relative;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 2rem;
 }
 
-
+.container::before {
+  content: '';
+  height: 100%;
+  width: .0625rem;
+  background-color: var(--clr-french-gray);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -.0313rem;
+}
 
 .left-col .recommended {
   background-color: var(--clr-federal-blue);
@@ -114,7 +127,7 @@ main {
   font-weight: bold;
   width: 75%;
   margin: 0 auto;
-  margin-top: 2em;
+  padding-top: 2em;
   line-height: 1.15;
 }
 
@@ -122,14 +135,26 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 2em;
-  gap: 1em
+  gap: 1em;
 }
 
 .dates {
   grid-column: 1 / 3;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: .0625rem
+  gap: .0625rem;
+  position: relative;
+}
+
+.dates::before {
+  content: '';
+  height: 100%;
+  width: .0625rem;
+  background-color: var(--clr-white-smoke);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -.0313rem;
 }
 
 .date {
@@ -137,7 +162,6 @@ main {
   font-weight: 500;
   background-color: var(--clr-french-gray);
   padding: 1em;
-  margin-bottom: 2.5em;
 }
 
 .conference {
@@ -234,6 +258,7 @@ main {
 
 .ticket.plus {
   grid-column: 1 / 3;
+  z-index: 999;
 }
 
 .staffplus {
