@@ -52,5 +52,5 @@ Implement two responsive HTML and CSS components.
 
 - Website: [Javel Wilson](https://javelwilson.com)
 
-## Acknowledgements
+## Acknowledgments
 
