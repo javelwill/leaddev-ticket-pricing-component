@@ -10,6 +10,11 @@
   --clr-french-gray: #CECEDA;
 
   --ff-normal: 'Hanken Grotesk', sans-serif;
+
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+  --fs-300: .625rem
 }
 
 *,
@@ -64,6 +69,173 @@ h6 {
 }
 
 body {
-  font-family: var(--ff-normal);
   padding: 1.3125em;
+}
+
+span,
+strong {
+  display: block;
+  color: var(--clr-federal-blue)
+}
+
+main {
+  font-size: var(--fs-400);
+  font-family: var(--ff-normal);
+  text-align: center;
+  color: var(--clr-federal-blue);
+}
+
+.left-col,
+.right-col {
+  background-color: var(--clr-white-smoke);
+  margin-bottom: 2em;
+}
+
+.left-col .container,
+.right-col .container {
+  padding: .5em;
+}
+
+
+
+.left-col .recommended {
+  background-color: var(--clr-federal-blue);
+  color: var(--clr-white);
+  font-size: var(--fs-600);
+  font-weight: bold;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.option {
+  font-size: var(--fs-600);
+  font-weight: bold;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 2em;
+  line-height: 1.15;
+}
+
+.tickets-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2em;
+  gap: 1em
+}
+
+.dates {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .0625rem
+}
+
+.date {
+  font-size: var(--fs-500);
+  font-weight: 500;
+  background-color: var(--clr-french-gray);
+  padding: 1em;
+  margin-bottom: 2.5em;
+}
+
+.conference {
+  margin-bottom: 1em;
+}
+
+.conference strong {
+  font-size: var(--fs-600);
+}
+
+.conference span {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.ticket {
+  background-color: var(--clr-white);
+  outline: none;
+  border-radius: 0.8em;
+  padding: 1em .6875em;
+  display: grid;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.primary {
+  border: 2px solid var(--clr-bright-pink);
+}
+
+.secondary {
+  border: 2px solid var(--clr-turquoise);
+}
+
+.tertiary {
+  border: 2px solid var(--clr-deep-sky-blue);
+}
+
+.primary:hover {
+  background-color: var(--clr-bright-pink);
+}
+
+.secondary:hover {
+  background-color: var(--clr-turquoise);
+}
+
+.tertiary:hover {
+  background-color: var(--clr-deep-sky-blue);
+}
+
+.ticket-savings {
+  border-radius: .1875rem;
+  padding: 0.5em 1.875rem;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  font-weight: bold;
+  font-size: var(--fs-300);
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.primary .ticket-savings {
+  color: var(--clr-white);
+  background-color: var(--clr-bright-pink);
+}
+
+.secondary .ticket-savings {
+  color: var(--clr-white);
+  background-color: var(--clr-turquoise);
+  color: var(--clr-federal-blue);
+}
+
+.tertiary .ticket-savings {
+  color: var(--clr-white);
+  background-color: var(--clr-deep-sky-blue);
+  color: var(--clr-federal-blue);
+}
+
+.ticket:hover .ticket-savings {
+  background-color: var(--clr-white);
+  color: var(--clr-federal-blue);
+}
+
+.ticket-price {
+  font-size: var(--fs-600);
+}
+
+.ticket-cta {
+  background-color: var(--clr-federal-blue);
+  color: var(--clr-white);
+  padding: 0.5em 1em;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.ticket.plus {
+  grid-column: 1 / 3;
+}
+
+.staffplus {
+  grid-column: 2 / 3;
 }
